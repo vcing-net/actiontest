@@ -1,11 +1,6 @@
 name: test
 on: 
   workflow_dispatch: 
-    inputs:
-      file-path: # id of input
-        description: "Path to test script"
-        required: true
-        default: "test-file.js"
 jobs: 
   test: 
     name: test job
@@ -16,4 +11,7 @@ jobs:
         with: 
           debug: true
       - run: echo hello
-      
+      - run: |
+              export test=testt
+      - run: |
+              echo $test
