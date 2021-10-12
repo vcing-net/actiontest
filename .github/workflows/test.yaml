@@ -8,8 +8,6 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v2
-        with: 
-          debug: true
       - run: echo hello
       - run: |
               touch test.ttt
