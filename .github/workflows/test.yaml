@@ -12,5 +12,8 @@ jobs:
           debug: true
       - run: echo hello
       - run: |
-              export test=testt
-              echo $test
+              touch test.ttt
+      - run: |
+              ls
+      - run: |
+              pwd
