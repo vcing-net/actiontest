@@ -10,11 +10,9 @@ jobs:
         uses: actions/checkout@v2
       - run: echo hello
       - run: |
-              touch test.ttt
-      - run: |
-              ls
-      - run: |
-              pwd
+          touch test.ttt
+          ls
+          pwd
   one:
     runs-on: ubuntu-latest
     steps:
