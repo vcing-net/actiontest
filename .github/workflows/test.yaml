@@ -6,11 +6,13 @@ jobs:
     name: test job
     runs-on: ubuntu-latest
     steps: 
-#       - name: checkout
-#         uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Set selected color
         run: echo '::set-output name=SELECTED_COLOR::green'
         id: random-color-generator
+      - name: test asdf
+        run: echo '::debug'
       - name: Get color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_COLOR }}"
       - run: echo hello
